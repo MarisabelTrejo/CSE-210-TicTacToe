@@ -144,7 +144,7 @@
     {
 
         Console.Write($"{currentPlayer}'s turn to choose a square (1-9): ");
-        string move_string = Console.ReadLine();
+        string move_string = Console.ReadLine() ?? ""; // avoid null problem
 
         int choice = int.Parse(move_string);
         return choice;
